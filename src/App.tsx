@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
-import { store, RootState, AppDispatch } from './store/index.tsx';
-import { fetchUsers } from "./store/userSlice.tsx";
-import { IUser } from './types/index.ts';
+import { store, RootState, AppDispatch } from './store';
+import { fetchUsers } from "./store/userSlice";
+import CustomTable from './components/table/table';
+import CustomInput from './components/input/input';
 
 const MyApp: React.FC = () => {
 
@@ -15,9 +16,8 @@ const MyApp: React.FC = () => {
 
   return (
     <div>
-      {users && users.map((user: IUser, index: number) => (
-        <div key={index}>{user.name}</div>
-      ))}
+      <CustomInput />
+      <CustomTable users={users} />
     </div>
   );
 };
