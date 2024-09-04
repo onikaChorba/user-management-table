@@ -1,16 +1,18 @@
 import React from 'react';
 import './input.styles.scss'
-import search from '../../assets/img/search.svg'
-export default function CustomInput() {
+import searchIcon from '../../assets/img/search.svg'
+
+export default function CustomInput({ search, onChange }: any) {
   return (
     <div className="input">
       <input
         type="text"
+        value={search}
         placeholder="Type to search..."
         className="input__field"
-      // onChange={handleChange}
+        onChange={onChange}
       />
-      <img src={search} alt='search' className='input__icon' />
+      <img src={searchIcon} alt='search' className='input__icon' />
     </div>
   )
 }

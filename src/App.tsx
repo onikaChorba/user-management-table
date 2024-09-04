@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, ChangeEvent } from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import { store, RootState, AppDispatch } from './store';
 import { fetchUsers } from "./store/userSlice";
@@ -14,10 +14,16 @@ const MyApp: React.FC = () => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
+  const [search, setSearch] = useState("");
+
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value)
+  }
+
   return (
     <div className='wrapper'>
-      <CustomInput />
-      <CustomTable users={users} />
+      <CustomInput search={search} onChange={handleSearchChange} />
+      <CustomTable users={users} search={search} />
     </div>
   );
 };

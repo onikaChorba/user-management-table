@@ -1,8 +1,7 @@
-import React from 'react';
 import './table.styles.scss'
-import { IUsers } from '../../types';
+import { IUser } from '../../types';
 
-export default function CustomTable({ users }: IUsers) {
+export default function CustomTable({ users, search }: { users: IUser[], search: string }) {
   return (
     <table className="table">
       <tbody>
@@ -12,7 +11,17 @@ export default function CustomTable({ users }: IUsers) {
           <th className="table__column"> Email</th>
           <th className="table__column"> Phone Number</th>
         </tr>
+
         {users && users
+          .filter((user) => {
+            const lowerCaseSearch = search.toLowerCase();
+            return (
+              user.name.toLowerCase().includes(lowerCaseSearch) ||
+              user.username.toLowerCase().includes(lowerCaseSearch) ||
+              user.email.toLowerCase().includes(lowerCaseSearch) ||
+              user.phone.toLowerCase().includes(lowerCaseSearch)
+            );
+          })
           .map((user, index) => (
             <tr key={index}>
               <td className="table__row">{user.name}</td>
