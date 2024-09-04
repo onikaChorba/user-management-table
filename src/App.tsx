@@ -14,7 +14,7 @@ const MyApp: React.FC = () => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value)

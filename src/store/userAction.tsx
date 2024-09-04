@@ -8,6 +8,6 @@ export const fetchUsers = () => async (dispatch: Dispatch) => {
     const data: IUser[] = await response.json();
     dispatch(setUsers(data));
   } catch (error) {
-    console.error('Failed to fetch posts:', error);
+    console.error('Failed to fetch users:', error);
   }
 };
