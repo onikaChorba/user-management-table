@@ -15,7 +15,7 @@ const MyApp: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='wrapper'>
       <CustomInput />
       <CustomTable users={users} />
     </div>
