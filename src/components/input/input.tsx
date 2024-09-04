@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 import './input.styles.scss'
 import searchIcon from '../../assets/img/search.svg'
 
-export default function CustomInput({ search, onChange }: any) {
+export default function CustomInput({ search, onChange }: { search: string, onChange: ChangeEventHandler<HTMLInputElement> }) {
   return (
     <div className="input">
       <input
