@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# 👩‍💻 User Management Table!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates my ability to create a responsive and functional user management table using React, Redux, and TypeScript. The table fetches data from a mock API and implements local filtering for a seamless user experience.
 
-## Available Scripts
+You can interact with the data, search by different fields, and view the table in a clean, well-organized UI that adapts to different screen sizes
 
-In the project directory, you can run:
+## 🛠️ Technologies and Methods Used
 
-### `npm start`
+### ⛳️ React with Functional Components and Hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is built with React's functional components along with hooks like useState, useEffect, and useMemo. These hooks helped manage component state, lifecycle events, and performance optimization efficiently.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🗂️ Redux for State Management
 
-### `npm test`
+I used Redux to manage the state of the application. Redux helps ensure that all user data is handled and updated consistently across the app. I chose the Redux Toolkit for more streamlined state management and cleaner code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔍 Advanced Filtering Implementation
 
-### `npm run build`
+For filtering, I implemented search input fields for each column (name, username, email, and phone). As users type in these fields, the table dynamically updates, showing results that match the search query in real-time.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🚀 TypeScript for Type Safety
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To ensure type safety across the entire application, I used TypeScript. This helped reduce potential runtime errors and improved the overall reliability of the codebase by enforcing types in components, Redux state, and the API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📱 Responsive and Adaptive Design
+The design focuses on clean and responsive layouts. I ensured that the table and form elements adapt well to different screen sizes, making the application accessible on both desktop and mobile devices.
 
-### `npm run eject`
+### 🌍 Fetching Data from JSONPlaceholder API
+User data is fetched from JSONPlaceholder using their /users endpoint. This data populates the user management table and updates dynamically with filtering functionality.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
